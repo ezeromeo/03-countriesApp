@@ -1,0 +1,10 @@
+<form (ngSubmit)="find()" autocomplete="off">
+  <input
+    type="text"
+    name="term"
+    class="form-control"
+    [(ngModel)]="term"
+    (input)="pressedKey()"
+    [placeholder]="placeholder"
+  />
+</form>

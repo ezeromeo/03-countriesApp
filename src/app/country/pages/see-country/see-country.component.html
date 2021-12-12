@@ -1,0 +1,41 @@
+<div *ngIf="!country; else divCountry" class="alert alert-info">
+  Wait please...
+</div>
+
+<ng-template #divCountry>
+  <div class="row">
+    <div class="col-12">
+      <h1>
+        Country: <small>{{ country.name }}</small>
+      </h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <h3>Flag</h3>
+      <img class="img-thumbnail" [src]="country.flag" />
+    </div>
+    <div class="row">
+      <h3>Information</h3>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <strong>Population </strong>{{ country.population | number }}
+        </li>
+      </ul>
+    </div>
+  </div>
+  <h3>Translations</h3>
+  <div class="row">
+    <div class="col">
+      <span class="badge bg-primary m-1">{{ country.translations.ja }}</span>
+      <span class="badge bg-primary m-1">{{ country.translations.it }}</span>
+      <span class="badge bg-primary m-1">{{ country.translations.fr }}</span>
+      <span class="badge bg-primary m-1">{{ country.translations.de }}</span>
+      <span class="badge bg-primary m-1">{{ country.translations.br }}</span>
+      <span class="badge bg-primary m-1">{{ country.translations.pt }}</span>
+      <span class="badge bg-primary m-1">{{ country.translations.nl }}</span>
+      <span class="badge bg-primary m-1">{{ country.translations.hr }}</span>
+      <span class="badge bg-primary m-1">{{ country.translations.fa }}</span>
+    </div>
+  </div>
+</ng-template>
